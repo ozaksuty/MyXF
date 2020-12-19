@@ -1,6 +1,8 @@
-﻿using System;
+﻿using MyXF.Client.mobile.ViewModels;
+using MyXF.Client.mobilebase.Helper;
+using MyXF.Client.mobilebase.ViewModels.Base;
+using System.Reflection;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace MyXF.Client.mobile
 {
@@ -10,7 +12,10 @@ namespace MyXF.Client.mobile
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            GlobalSetting.Instance.PagesPath = "Pages";
+            GlobalSetting.Instance.ViewsPath = "Views";
+            GlobalSetting.Instance.ViewModelPath = "ViewModels";
+            ViewModelLocator.Init<AppShellPageViewModel>(Assembly.GetExecutingAssembly());
         }
 
         protected override void OnStart()

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:viewModelBase="clr-namespace:MyXF.Client.mobilebase.ViewModels.Base;assembly=MyXF.Client.mobilebase"
+       viewModelBase:ViewModelLocator.AutoWireViewModel="true"
+       xmlns:pages="clr-namespace:MyXF.Client.mobile.Pages"
+       x:Class="MyXF.Client.mobile.Pages.AppShellPage">
+
+    <ShellContent ContentTemplate="{DataTemplate pages:MainPage}"/>
+
+</Shell>
