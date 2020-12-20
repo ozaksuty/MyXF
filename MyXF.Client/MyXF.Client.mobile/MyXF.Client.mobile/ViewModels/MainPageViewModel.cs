@@ -16,5 +16,9 @@ namespace MyXF.Client.mobile.ViewModels
         {
             DialogService.AlertAsync("Dialog Service", "Test", "Ok");
         });
+        public ICommand GoToListPageCommand => new Command(() =>
+        {
+            NavigationService.NavigateToAsync<ListPageViewModel>("Yiğit Özaksüt");
+        });
     }
 }

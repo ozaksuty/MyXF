@@ -3,12 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModelBase="clr-namespace:MyXF.Client.mobilebase.ViewModels.Base;assembly=MyXF.Client.mobilebase"
              viewModelBase:ViewModelLocator.AutoWireViewModel="true"
-             x:Class="MyXF.Client.mobile.Pages.MainPage">
-    
-    <StackLayout>
-        <Button Text="Dialog Service Test"
-                Command="{Binding DialogCommand}"/>
-        <Button Text="Go To ListPage"
-                Command="{Binding GoToListPageCommand}"/>
-    </StackLayout>
+             x:Class="MyXF.Client.mobile.Pages.ListPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
