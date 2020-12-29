@@ -64,7 +64,14 @@ namespace MyXF.Client.mobilebase.Services.Navigation
             Type pageType = GetPageTypeForViewModel(viewModelType);
             if (pageType == null)
                 throw new Exception($"Cannot locate page type for {viewModelType}");
-            return Activator.CreateInstance(pageType) as Page;
+            try
+            {
+                return Activator.CreateInstance(pageType) as Page;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
         }
         protected PopupPage CreatePopupPage(Type viewModelType)
         {

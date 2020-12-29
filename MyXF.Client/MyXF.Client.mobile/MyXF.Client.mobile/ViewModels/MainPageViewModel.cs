@@ -18,7 +18,7 @@ namespace MyXF.Client.mobile.ViewModels
         });
         public ICommand GoToListPageCommand => new Command(() =>
         {
-            NavigationService.NavigateToAsync<ListPageViewModel>("Yiğit Özaksüt");
+            NavigationService.NavigateToAsync<ListPageViewModel>();
         });
     }
 }

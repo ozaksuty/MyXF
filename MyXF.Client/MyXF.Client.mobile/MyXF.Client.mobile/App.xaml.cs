@@ -15,7 +15,8 @@ namespace MyXF.Client.mobile
             GlobalSetting.Instance.PagesPath = "Pages";
             GlobalSetting.Instance.ViewsPath = "Views";
             GlobalSetting.Instance.ViewModelPath = "ViewModels";
-            ViewModelLocator.Init<AppShellPageViewModel>(Assembly.GetExecutingAssembly());
+            GlobalSetting.Instance.BaseEndpoint = "https://jsonplaceholder.typicode.com";
+            ViewModelLocator.Init<AppShellPageViewModel> (Assembly.GetExecutingAssembly());
         }
 
         protected override void OnStart()

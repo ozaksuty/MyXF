@@ -9,11 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyXF.Client.mobile.Android"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyXF.Client.mobile.iOS", "MyXF.Client\MyXF.Client.mobile\MyXF.Client.mobile.iOS\MyXF.Client.mobile.iOS.csproj", "{04CED87C-91D9-45E2-8702-93E228E280C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyXF.Client.mobile", "MyXF.Client\MyXF.Client.mobile\MyXF.Client.mobile\MyXF.Client.mobile.csproj", "{CC23033D-2167-49B6-AAFE-B5E747B5B6A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyXF.Client.mobile", "MyXF.Client\MyXF.Client.mobile\MyXF.Client.mobile\MyXF.Client.mobile.csproj", "{CC23033D-2167-49B6-AAFE-B5E747B5B6A8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "base", "base", "{235DAA44-5F2B-4C4C-A384-01CC8EB5DC7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyXF.Client.mobilebase", "MyXF.Client\base\MyXF.Client.mobilebase\MyXF.Client.mobilebase.csproj", "{58FAB273-53DE-4DC5-989A-0198AFD1F364}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyXF.Client.mobilebase", "MyXF.Client\base\MyXF.Client.mobilebase\MyXF.Client.mobilebase.csproj", "{58FAB273-53DE-4DC5-989A-0198AFD1F364}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MyXF.API", "MyXF.API", "{55550FDD-93BD-40FE-A7BA-D132BAAECC09}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

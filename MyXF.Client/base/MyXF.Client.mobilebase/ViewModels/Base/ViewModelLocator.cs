@@ -1,5 +1,7 @@
 ﻿using Autofac;
 using MyXF.Client.mobilebase.Helper;
+using MyXF.Client.mobilebase.Selectors.implementations;
+using MyXF.Client.mobilebase.Selectors.interfaces;
 using MyXF.Client.mobilebase.Services;
 using MyXF.Client.mobilebase.Services.Navigation;
 using Rg.Plugins.Popup.Pages;
@@ -69,6 +71,16 @@ namespace MyXF.Client.mobilebase.ViewModels.Base
                    .AssignableTo<IServiceBase>()
                    .AsImplementedInterfaces()
                    .SingleInstance();
+
+            builder.RegisterAssemblyTypes(assembly)
+                   .AssignableTo<IServiceBase>()
+                   .AsImplementedInterfaces()
+                   .SingleInstance();
+
+            builder.RegisterGeneric(typeof(ApiRequest<>)).
+                As(typeof(IApiRequest<>)).InstancePerDependency();
+            builder.RegisterGeneric(typeof(ApiRequestSelector<>)).
+                As(typeof(IApiRequestSelector<>)).InstancePerDependency();
 
             if (_container != null)
                 _container.Dispose();
