@@ -2,7 +2,6 @@
 using MyXF.Client.mobile.Services.User;
 using MyXF.Client.mobilebase.Helper;
 using MyXF.Client.mobilebase.ViewModels.Base;
-using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;

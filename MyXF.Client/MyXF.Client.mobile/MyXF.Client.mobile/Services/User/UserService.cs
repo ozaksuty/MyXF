@@ -17,6 +17,7 @@ namespace MyXF.Client.mobile.Services.User
             IApiRequestSelector<IUserEndpoint> apiRequestSelector)
         {
             _request = request;
+            //_request.BaseApiAddress = "https://reqres.in/api";
             _apiRequestSelector = apiRequestSelector;
         }
         public async Task<List<Models.User>> Get(PriorityType priorityType)

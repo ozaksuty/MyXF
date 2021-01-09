@@ -35,7 +35,7 @@ namespace MyXF.Client.mobilebase.Selectors.implementations
             set { _baseApiAddress = value; }
         }
 
-        public T CreateClient(HttpMessageHandler handler, string baseApiAddress = null)
+        private T CreateClient(HttpMessageHandler handler, string baseApiAddress = null)
         {
             HttpClient client;
             if (GlobalSetting.Instance.UseNativeHttpHandler)
