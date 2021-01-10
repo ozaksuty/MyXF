@@ -13,5 +13,10 @@
         public string ViewsPath { get; set; } = "Views";
         public string PagesPath { get; set; } = "Pages";
         public string ViewModelPath { get; set; } = "ViewModels";
+        public bool IsTest { get; set; } = false;
+        public bool UseAppCenter { get; set; } = false;
+        public string AppCenterAndroidKey { get; set; }
+        public string AppCenteriOSKey { get; set; }
+        public string AppCenterUWPKey { get; set; }
     }
 }

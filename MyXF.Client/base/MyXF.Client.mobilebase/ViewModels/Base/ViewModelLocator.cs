@@ -54,6 +54,7 @@ namespace MyXF.Client.mobilebase.ViewModels.Base
         {
             return _container.Resolve<T>();
         }
+
         /// <summary>
         /// Use GlobalSetting before Init
         /// </summary>
@@ -86,6 +87,12 @@ namespace MyXF.Client.mobilebase.ViewModels.Base
                 _container.Dispose();
 
             _container = builder.Build();
+
+            if (GlobalSetting.Instance.UseAppCenter)
+            {
+                var _appCenter = Resolve<Services.AppCenter.IAppCenterService>();
+                _appCenter.Init();
+            }
 
             var navigationService = Resolve<INavigationService>();
             navigationService.InitializeAsync<TViewModel>();

@@ -14,6 +14,10 @@
     <PackageReference Include="Acr.UserDialogs" Version="7.1.0.470" />
     <PackageReference Include="Autofac" Version="6.1.0" />
     <PackageReference Include="fusillade" Version="2.2.9" />
+    <PackageReference Include="Microsoft.AppCenter" Version="4.1.0" />
+    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="4.1.0" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="4.1.0" />
+    <PackageReference Include="Microsoft.AppCenter.Distribute" Version="4.1.0" />
     <PackageReference Include="modernhttpclient-updated" Version="3.4.3" />
     <PackageReference Include="Polly" Version="7.2.1" />
     <PackageReference Include="Refit" Version="5.2.4" />

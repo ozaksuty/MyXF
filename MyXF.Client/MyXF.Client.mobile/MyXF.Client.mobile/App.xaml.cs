@@ -16,6 +16,10 @@ namespace MyXF.Client.mobile
             GlobalSetting.Instance.ViewsPath = "Views";
             GlobalSetting.Instance.ViewModelPath = "ViewModels";
             GlobalSetting.Instance.BaseEndpoint = "https://jsonplaceholder.typicode.com";
+
+            GlobalSetting.Instance.UseAppCenter = true;
+            GlobalSetting.Instance.AppCenterAndroidKey = "298a2e08-5c19-4da3-b6f8-953d64c49ff2;";
+
             ViewModelLocator.Init<AppShellPageViewModel> (Assembly.GetExecutingAssembly());
         }
 
