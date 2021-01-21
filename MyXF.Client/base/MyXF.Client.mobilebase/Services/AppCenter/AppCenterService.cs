@@ -2,13 +2,34 @@
 using Microsoft.AppCenter.Crashes;
 using Microsoft.AppCenter.Distribute;
 using MyXF.Client.mobilebase.Helper;
+using Refit;
 using System;
+using System.Collections.Generic;
 using System.Text;
 
 namespace MyXF.Client.mobilebase.Services.AppCenter
 {
     public class AppCenterService : IAppCenterService
     {
+        public bool HandleApiException(ApiException ex)
+        {
+            Crashes.TrackError(ex, new Dictionary<string, string>
+            {
+                { "Time", DateTime.Now.ToString() },
+                { "Exception-Type", "API" }
+            });
+            return false;
+        }
+
+        public void HandleException(Exception ex)
+        {
+            Crashes.TrackError(ex, new Dictionary<string, string>
+            {
+                { "Time", DateTime.Now.ToString() },
+                { "Exception-Type", "CUSTOM" }
+            });
+        }
+
         public void Init()
         {
             StringBuilder _appCenterBuild = new StringBuilder();
