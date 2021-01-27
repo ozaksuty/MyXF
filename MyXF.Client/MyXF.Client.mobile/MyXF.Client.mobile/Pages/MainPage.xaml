@@ -6,6 +6,8 @@
              x:Class="MyXF.Client.mobile.Pages.MainPage">
     
     <StackLayout>
+        <DatePicker TextColor="Black"
+                    BackgroundColor="White" />
         <Button Text="Dialog Service Test"
                 Command="{Binding DialogCommand}"/>
         <Button Text="Go To ListPage"

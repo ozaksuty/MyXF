@@ -1,8 +1,7 @@
-﻿using MyXF.Client.mobilebase.Services.AppCenter;
-using MyXF.Client.mobilebase.ViewModels.Base;
-using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Windows.Input;
+using MyXF.Client.mobilebase.Services.AppCenter;
+using MyXF.Client.mobilebase.ViewModels.Base;
 using Xamarin.Forms;
 
 namespace MyXF.Client.mobile.ViewModels
@@ -23,15 +22,7 @@ namespace MyXF.Client.mobile.ViewModels
 
         public ICommand DialogCommand => new Command(() =>
         {
-            try
-            {
-                throw new Exception("Test Exception");
-            }
-            catch (Exception ex)
-            {
-                _appCenterService.HandleException(ex);
-            }
-            //DialogService.AlertAsync("Dialog Service", "Test", "Ok");
+            DialogService.AlertAsync("Dialog Service", "Test", "Ok");
         });
         public ICommand GoToListPageCommand => new Command(() =>
         {
