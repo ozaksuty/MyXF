@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>Xamarin.MyXF</id>
+    <version>1.0.1</version>
+    <authors>Yigit Ozaksut</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/ozaksuty/MyXF/</projectUrl>
+    <iconUrl>https://cdn2.iconfinder.com/data/icons/vivid/48/rocket-512.png</iconUrl>
+    <description>MyXF is simple and wrapped framework for Xamarin.Forms</description>
+    <releaseNotes>v1.0.1 - Added new Log method to IAppCenterService and refactor ApiRequestSelector.cs</releaseNotes>
+    <copyright>Copyright 2021</copyright>
+    <tags>Xamarin, Refit, Polly, Fusillade, AppCenter</tags>
+    <dependencies>
+      <dependency id="acr.userdialogs" version="7.1.0.475" />
+      <dependency id="autofac" version="6.1.0" />
+      <dependency id="fusillade" version="2.3.1" />
+      <dependency id="microsoft.appcenter" version="4.1.0" />
+      <dependency id="microsoft.appcenter.analytics" version="4.1.0" />
+      <dependency id="microsoft.appcenter.crashes" version="4.1.0" />
+      <dependency id="microsoft.appcenter.distribute" version="4.1.0" />
+      <dependency id="modernhttpclient-updated" version="3.4.3" />
+      <dependency id="polly" version="7.2.1" />
+      <dependency id="refit" version="5.2.4" />
+      <dependency id="rg.plugins.popup" version="2.0.0.10" />
+    </dependencies>
+  </metadata>
+</package>

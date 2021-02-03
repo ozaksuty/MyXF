@@ -1,17 +1,22 @@
-﻿using Microsoft.AppCenter.Analytics;
-using MyXF.Client.mobilebase.Helper;
-using MyXF.Client.mobilebase.Selectors.interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using MyXF.Client.mobilebase.Helper;
+using MyXF.Client.mobilebase.Selectors.interfaces;
+using MyXF.Client.mobilebase.Services.AppCenter;
 
 namespace MyXF.Client.mobilebase.Selectors.implementations
 {
     public class ApiRequestSelector<T> : IApiRequestSelector<T>
     {
+        private readonly IAppCenterService _appCenterService;
+        public ApiRequestSelector(IAppCenterService appCenterService)
+        {
+            _appCenterService = appCenterService;
+        }
         public T GetApiRequestByPriority(IApiRequest<T> apiRequest, PriorityType priorityType, [CallerMemberName] string methodName = "")
         {
-            Analytics.TrackEvent($"CallerMemberName: {methodName}",
+            _appCenterService.Log(methodName,
                 new Dictionary<string, string>
                 {
                     {

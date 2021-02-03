@@ -20,7 +20,7 @@ namespace MyXF.Client.mobile.Services.User
             IAppCenterService appCenterService)
         {
             _request = request;
-            _request.BaseApiAddress = "https://reqres.in/api404";
+            //_request.BaseApiAddress = "https://reqres.in/api";
             _apiRequestSelector = apiRequestSelector;
             _appCenterService = appCenterService;
         }

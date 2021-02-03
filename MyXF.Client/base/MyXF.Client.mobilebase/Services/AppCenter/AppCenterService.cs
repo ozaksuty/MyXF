@@ -30,6 +30,11 @@ namespace MyXF.Client.mobilebase.Services.AppCenter
             });
         }
 
+        public void Log(string name, IDictionary<string, string> properties = null)
+        {
+            Analytics.TrackEvent($"CallerMemberName: {name}", properties);
+        }
+
         public void Init()
         {
             StringBuilder _appCenterBuild = new StringBuilder();
